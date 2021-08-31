@@ -1,1 +1,3 @@
-This directory contains projects related to C low level programming namely ; functions and nested loops.The scripts are aptly named to show what they do.
+# Functions and nested loops
+
+This directory contains c programs exploring how to use functions to perform various tasks
