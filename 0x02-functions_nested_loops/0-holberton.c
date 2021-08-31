@@ -1,22 +1,20 @@
-#include "main.h"
+#include "holberton.h"
 
 /**
- *main - prints the characters "Holberton to stdout"
- *
- *Return: returns 0
- */
-
+* main - the function starts here
+* Description - prints out Holberton followed by a new line
+* Return: Function returns 0.
+*/
 int main(void)
 {
-	int i = 0;
-	char c[] = "_putchar";
-
-	while (c[i] != '\0')
-	{
-		_putchar(c[i]);
-		i++;
-	}
-
-	_putchar('\n');
-	return (0);
+_putchar('H');
+_putchar('o');
+_putchar('l');
+_putchar('b');
+_putchar('e');
+_putchar('t');
+_putchar('o');
+_putchar('n');
+_putchar('\n');
+return (0);
 }

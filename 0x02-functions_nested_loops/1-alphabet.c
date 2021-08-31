@@ -1,19 +1,13 @@
-#include "main.h"
+#include "holberton.h"
 
 /**
- *print_alphabet - prints the alphabet in lowercse
- *@void: has no input parameters
- *
- *Return: does not return anything
- */
-
+* print_alphabet - Prints out lowercase alphabet followed by a new line
+* Return: function returns 0
+*/
 void print_alphabet(void)
 {
-	char c;
+char ch;
 
-	for (c = 'a'; c <= 'z'; c++)
-	{
-		_putchar(c);
-	}
-	_putchar('\n');
+for (ch = 'a'; ch <= 'z'; ch++)
+_putchar('\n');
 }
