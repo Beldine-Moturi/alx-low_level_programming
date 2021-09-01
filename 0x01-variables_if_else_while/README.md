@@ -1,1 +1,13 @@
-# Introduction to Variables, Conditional statemembts and Loops
+# Variables an Flow control in C
+
+The files in this directory are programs that utilise C variables and flow control keywords(if, if..else, while, for, do..while) to solve various problems.
+
+
+## 0-positive_or_negative.c
+
+This program assigns a random number to an integer n each time it is executed. Depending on the number stored, it prints out whether it is positive, negative or 0. n will store a different value every time you run this program.
+
+
+## 1-last_digit.c
+
+This program assigns a random number to variable n then prints the last digit of n. n will store a different value each time you execute
