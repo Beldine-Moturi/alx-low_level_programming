@@ -26,3 +26,8 @@ Prints the alphabet in lowercase, and then in uppercase, followed by a new line
 ## 4-print_alphabt.c
 
 Prints the alphabet in lowercase, except the letters q and e, followed by a new line
+
+
+## 5-print_numbers.c
+
+Prints all single digit base 10 numbers, starting from 0, followed by a new line
