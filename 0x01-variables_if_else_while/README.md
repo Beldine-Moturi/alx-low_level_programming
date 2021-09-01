@@ -11,3 +11,13 @@ This program assigns a random number to an integer n each time it is executed. D
 ## 1-last_digit.c
 
 This program assigns a random number to variable n then prints the last digit of n. n will store a different value each time you execute
+
+
+## 2-print_alphabet.c
+
+This program prints the alphabet in lowercase, followed by a new line
+
+
+## 3-print_alphabets.c
+
+Prints the alphabet in lowercase, and then in uppercase, followed by a new line
