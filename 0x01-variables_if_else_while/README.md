@@ -46,3 +46,8 @@ Prints lowercase alphabet in reverse
 ## 8-print_base16.c
 
 Prints all the numbers of base 16, in lowercase, followed by a new line
+
+
+## 9-print_comb.c
+
+This program prints all possible combinatios of single digit numbers
