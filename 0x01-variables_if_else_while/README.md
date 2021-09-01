@@ -36,3 +36,8 @@ Prints all single digit base 10 numbers, starting from 0, followed by a new line
 ## 6-print_numberz.c
 
 Prints all single digit numbers of base 10, starting from 0, followed by a new line
+
+
+## 7-print_tebahpla.c
+
+Prints lowercase alphabet in reverse
