@@ -1,3 +1,0 @@
-``` script
-debug that code
-```
