@@ -61,3 +61,8 @@ Prints all possible different combinations of two digits, with the exception sim
 ## 101-print_comb4.c
 
 Prints all possible combinations of three digits, with the exception of similar digits and similar combinations
+
+
+## 102-print_comb5.c
+
+This program prints all possible combinations of two two-digit numbers.
