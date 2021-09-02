@@ -1,21 +1,22 @@
-
 #include <stdio.h>
 
 /**
-* main - Entry point
-*
-* Return: returns 0 on success
-*
-*/
+ *main - prints alphabet in lowercase, then uppercase
+ *followed by a new line
+ *
+ *Return: 0 on success
+ *
+ */
 
 int main(void)
 {
-	int n;
+	char c;
 
-	for (n = 97; n <= 122; ++n)
-		putchar(n);
-	for (n = 65; n <= 90; ++n)
-		putchar(n);
-	putchar(10);
+	for (c = 'a'; c <= 'z'; c++)
+		putchar(c);
+	for (c = 'A'; c <= 'Z'; c++)
+		putchar(c);
+	putchar('\n');
+
 	return (0);
 }
