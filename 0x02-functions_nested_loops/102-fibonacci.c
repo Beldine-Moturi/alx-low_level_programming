@@ -13,9 +13,9 @@ int main(void)
 	long long int x = 1, y = 2, z;
 	int n;
 
-	for (n = 0; n < 50; n++)
+	for (n = 2; n < 50; n++)
 	{
-		if (n == 0)
+		if (n == 2)
 		{
 			z = x + y;
 			printf("%lld, %lld, %lld", x, y, z);
