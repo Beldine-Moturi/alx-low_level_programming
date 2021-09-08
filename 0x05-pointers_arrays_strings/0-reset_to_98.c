@@ -1,10 +1,12 @@
 #include "main.h"
 
 /**
- * reset_to_98 - function to update the variable
+ *reset_to_98 - updates value that pointer n points to to 98
+ *@n: the pointer to be updated
  *
- *@n: pointer for the variable
- **/
+ *Return: has no return value
+ *
+ */
 
 void reset_to_98(int *n)
 {
