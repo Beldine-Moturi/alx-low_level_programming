@@ -14,20 +14,15 @@ void rev_string(char *s)
 
 	char *start, *end, temp;
 
-	while (*(s + len) != '\0')
+	while (s[len] != '\0')
 	{
 		len++;
 	}
 
 	start = s;
-	end = s;
+	end = &s[len - 1];
 
-	for (i = 0; i < len - 1; i++)
-	{
-		end++;
-	}
-
-	for (i = 0; i <= len / 2; i++)
+	for (i = 0; i < len / 2; i++)
 	{
 		temp = *start;
 		*start = *end;
