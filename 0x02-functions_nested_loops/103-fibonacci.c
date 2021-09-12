@@ -11,19 +11,16 @@
 int main(void)
 {
 	unsigned int x = 0, y = 1, z;
-	float sum;
 
-	z = x + y;
-	while (z < 4000000)
+	while (z <= 4000000)
 	{
-		if ((z % 2) == 0)
-			sum += z;
+		z = x + y;
+		if (z % 2 == 0)
+			printf("%d\n", z);
 
 		x = y;
 		y = z;
-		z = x + y;
 	}
-	printf("%.0f\n", sum);
 
 	return (0);
 }
