@@ -42,6 +42,5 @@ int main(void)
 		y2 = z2;
 	}
 	putchar('\n');
-	
 	return (0);
 }
