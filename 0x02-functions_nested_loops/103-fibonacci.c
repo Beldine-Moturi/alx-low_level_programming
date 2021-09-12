@@ -10,18 +10,18 @@
 
 int main(void)
 {
-	unsigned int x = 0, y = 1, z;
+	unsigned int x = 0, y = 1, z, sum;
 
 	while (z <= 4000000)
 	{
 		z = x + y;
 		if (z % 2 == 0)
-			printf("%d\n", z);
+			sum += z;
 
 		x = y;
 		y = z;
 	}
+	printf("%d\n", sum);
 
 	return (0);
 }
-
