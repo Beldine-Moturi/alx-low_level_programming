@@ -10,23 +10,18 @@
 
 int main(void)
 {
-	long long int x = 1, y = 2, z;
+	long long int x = 0, y = 1, z;
 	int n;
 
-	for (n = 2; n < 50; n++)
+	for (n = 0; n < 50; n++)
 	{
-		if (n == 2)
-		{
-			z = x + y;
-			printf("%lld, %lld, %lld", x, y, z);
-		}
+		z = x + y;
+		if (n == 0)
+			printf("%lld", z);
 		else
-		{
-			x = y;
-			y = z;
-			z = x + y;
 			printf(", %lld", z);
-		}
+		x = y;
+		y = z;
 	}
 	putchar('\n');
 
