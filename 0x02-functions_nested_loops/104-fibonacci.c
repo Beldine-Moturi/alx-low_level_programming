@@ -32,9 +32,9 @@ int main(void)
 		z2 = x2 + y2;
 
 		if (i == 97)
-			printf("%ld%ld", z1, z2);
+			printf("%ld%ld", (z1 + z2 / 1000000000), z2 % 1000000000);
 		else
-			printf("%ld%ld, ", z1, z2);
+			printf("%ld%ld, ", (z1 + z2 / 1000000000), z2 % 1000000000);
 
 		x1 = y1;
 		x2 = y2;
