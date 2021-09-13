@@ -1,10 +1,12 @@
 #include "main.h"
+
 /**
  *print_chessboard - prints the chessboard
  *@a: an array of pointers
  *
  *Return: void
 */
+
 void print_chessboard(char (*a)[8])
 {
 	int i, j;
