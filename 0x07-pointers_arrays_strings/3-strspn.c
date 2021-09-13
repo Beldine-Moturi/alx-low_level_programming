@@ -14,26 +14,17 @@
 
 unsigned int _strspn(char *s, char *accept)
 {
-	int i, j, match = 0;
+	unsigned int i, j;
 
-	i = 0;
-	while (s[i] != '\0')
+	for (i = 0; s[i]; i++)
 	{
-		if (s[i] != ' ')
+		for (j = 0; accept[j]; j++)
 		{
-			j = 0;
-			while (accept[j] != '\0')
-			{
-				if (accept[j] == s[i])
-				{
-					match = match++;
-				}
-				j++;
-			}
+			if (s[i] == accept[j])
+				break;
 		}
-		else
-			return (match);
-		i++;
+		if (!accept[j])
+			break;
 	}
-	return (match);
+	return (i);
 }
