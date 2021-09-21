@@ -18,19 +18,21 @@ char *rot13(char *s)
 	{
 		for (c = 'a'; c <= 'z'; c++)
 		{
-			if (c >= 'n')
+			if (*(s + i) == c || (c - *(s + i) == 32))
 			{
-				if (*(s + i) == c || (c - *(s + i) == 32))
+				if (c >= 'n')
+				{
 					*(s + i) -= 13;
-			}
-			else if (c < 'n')
-			{
-				if (*(s + i) == c || (c - *(s + i) == 32))
+					break;
+				}
+				else if (c < 'n')
+				{
 					*(s + i) += 13;
+					break;
+				}
 			}
 		}
 		i++;
 	}
 	return (s);
 }
-
