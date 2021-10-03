@@ -1,54 +1,42 @@
 #include "main.h"
-
 /**
- *string_nconcat - concatenates two strings
- *@s1: the first string
- *@s2: the second string
- *@n: number of bytes to copy from s2
- *
- *Return: pointer to a newly allocated space in memory
- *        containing s1 followed by s2
- *        Returns NULL if function fails
- *
- */
-
+* string_nconcat - concatenates two strings.
+* @s1: string 1.
+* @s2: string 2.
+* @n: first n bytes of s2.
+*
+* Return: void pointer.
+*/
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *p;
+	unsigned int i, len = 0, lens1;
+	char *str;
 
-	int i = 0;
+	if (s1 != NULL)
+		for (i = 0; s1[i] != '\0'; i++)
+			len++;
 
-	unsigned int j = 0;
-
-	if (s1 == NULL)
-		s1 = "";
-
-	if (s2 == NULL)
-		s2 = "";
-
-	while (s1[i])
+	lens1 = len;
+	if (s2 != NULL)
 	{
-		i++;
+		if (sizeof(s2) > n)
+			for (i = 0; i < n; i++)
+				len++;
+		else
+			for (i = 0; s2[i] != '\0'; i++)
+				len++;
 	}
-
-	p = malloc(sizeof(char) * (i + n + 1));
-	if (p == NULL)
+	str = malloc(sizeof(char) * (len + 1));
+	if (str == NULL)
 		return (NULL);
+	str[len] = '\0';
+	if (s1 != NULL)
+		for (i = 0; s1[i] != '\0'; i++)
+			str[i] = s1[i];
 
-	i = 0;
-	while (s1[i])
-	{
-		p[i] = s1[i];
-		i++;
-	}
+	if (s2 != NULL)
+		for (; i < len; i++)
+			str[i] = s2[i - lens1];
 
-	while (j < n && s2[j])
-	{
-		p[i] = s2[j];
-		i++;
-		j++;
-	}
-	p[i] = '\0';
-
-	return (p);
+	return (str);
 }
