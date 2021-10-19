@@ -83,7 +83,7 @@ char **strtow(char *str)
 	{
 		while (str[i] == ' ')
 		{
-			i++;;
+			i++;
 		}
 		bytes = char_count(str, i);
 
