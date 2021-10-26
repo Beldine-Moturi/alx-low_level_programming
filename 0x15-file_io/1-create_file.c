@@ -31,8 +31,8 @@ int create_file(const char *filename, char *text_content)
 		while (text_content[len])
 			len++;
 
-		bytesWritten = write(fd, text_content, len + 1);
-		if (bytesWritten == -1 || bytesWritten != (ssize_t)(len + 1))
+		bytesWritten = write(fd, text_content, len);
+		if (bytesWritten == -1 || bytesWritten != (ssize_t)(len))
 			return (-1);
 	}
 
