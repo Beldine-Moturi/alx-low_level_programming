@@ -25,31 +25,19 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	fd = open(filename, O_RDONLY);
 	if (fd == -1)
-	{
-		perror("open");
 		return (0);
-	}
 
 	bytesRead = read(fd, buffer, letters);
-	if (bytesRead <= 0)
-	{
-		perror("read");
+	if (bytesRead == -1)
 		return (0);
-	}
 	buffer[bytesRead] = '\0';
 
 	bytesWritten = write(STDOUT_FILENO, buffer, bytesRead);
 	if (bytesWritten == -1 || bytesWritten != bytesRead)
-	{
-		perror("write");
 		return (0);
-	}
 
 	if (close(fd) == -1)
-	{
-		perror("close");
 		return (0);
-	}
 
 	return (bytesWritten);
 }
