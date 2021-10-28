@@ -6,7 +6,7 @@ void close_file(int fd);
 
 /**
  * create_buffer - Allocates 1024 bytes to a buffer.
- * @file: The name of the file buffer is storing chars for.
+ * @filename: The name of the file buffer is storing chars for.
  *
  * Return: A pointer to the newly-allocated buffer.
  *
@@ -51,8 +51,8 @@ void close_file(int fd)
 
 /**
  *main - copies the content of a file into another file
- *@ac: number of arguments passed to main
- *@av: array of string arguments passed to main
+ *@argc: number of arguments passed to main
+ *@argv: array of string arguments passed to main
  *
  *Return: 0 on success, positive integer on failure
  *
@@ -64,7 +64,7 @@ int main(int argc, char *argv[])
 	char *buffer;
 	mode_t filePerms;
 	ssize_t bytesRead, bytesWritten;
-	
+
 	openFlags = O_WRONLY | O_CREAT | O_TRUNC;
 	filePerms = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH;
 
@@ -76,7 +76,7 @@ int main(int argc, char *argv[])
 
 	buffer = create_buffer(argv[2]);
 	inputFd = open(argv[1], O_RDONLY);
-	bytesRead = read(from, buffer, 1024);
+	bytesRead = read(inputFd, buffer, 1024);
 	outputFd = open(argv[2], openFlags, filePerms);
 
 	do {
