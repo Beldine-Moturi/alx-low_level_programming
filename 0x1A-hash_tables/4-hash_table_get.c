@@ -24,8 +24,7 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 	{
 		if (node->key == key)
 			return (node->value);
-		else
-			node = node->next;
+		node = node->next;
 	}
 	return (NULL);
 }
